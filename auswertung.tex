@@ -1,0 +1,275 @@
+\chapter{Auswertung und Diskussion}
+
+Diese Arbeit befasst sich sowohl mit der Nutzung von Energiestromdaten zur Berechnung effektiver SEEC, als auch mit der Methodik zur Aufnahme der nötigen Daten und den Verfahren, mit denen sich die für diese Messungen nötigen Rahmenbedingungen herstellen lassen. Deshalb werden auch in der Auswertung der gesammelten Daten Fragestellungen aus diesen verschiedenen Bereichen betrachtet.
+Insbesondere stellen sich dabei folgende Fragen:
+\begin{itemize}
+	\item Wie lässt sich die nötige Gasreinheit sicherstellen?
+	\item Wie kann die Gasreinheit im Laufe der Messung aufrechterhalten werden?
+	\item Welche Verunreinigungen können auftreten und wie lassen sie sich vermeiden?
+	\item Wie kann die Entladung auf Verunreinigungen überprüft werden?
+	\item Wie kann überprüft werden, ob sich zwischen den Elektroden eine Glimmentladung ausbildet?
+	\item Welche Spannung ist zur Erzeugung des Mikroplasmas notwendig?
+	\item Welcher Wirkungsgrad kann in dieser Entladung erreicht werden?
+	\item Welche Fehler treten in der Messung der Energieströme und ESEEC auf?
+	\item Welche Leistungen und Energieströme fließen auf die Thermosonden?
+	\item Was sind die ESEEC bei den vermessenen Metall-Gas-Kombinationen?
+\end{itemize}
+
+\section{Herstellung der notwendigen Rahmenbedingungen}\label{sec:gasreinheit}
+
+Die Reinheit des Arbeitsgases ist für einen stabilen Betrieb des Plasmas von höchster Relevanz. Deshalb wurde zunächst untersucht, wie sich diese im weiteren Verlauf der Messungen zuverlässig herstellen lässt. Dazu wurden vor allem zwei aus der Literatur bekannte Methoden versucht: Ein mehrfaches Abpumpen und Wiederbefüllen der Kammer \cite{arumugamEffectiveSecondaryElectron2017} und ein Durchspülen der Kammer mit dem Arbeitsgas \cite{hansenConventionalNonconventionalDiagnostics2022}. Als Maß für das Bestehen einer hinreichenden Gasreinheit wird hier stets die Stabilität des Plasmas betrachtet, wie sie aus den elektronischen Daten erkennbar ist. Gibt es Verunreinigungen im Gas, bilden sich Instabilitäten in Form von Funken- bzw. Bogenentladungen.\footnote{Dieser Effekt wird in Abschnitt \ref{sec:probleme} ausführlicher besprochen.} Bei reinerer Gasatmosphäre werden diese seltener, bis sie schließlich ganz verschwinden. Dieser Zustand wird bei allen Messungen angestrebt.
+\paragraph{Durchspülen der Kammer:}
+Zuerst wurde der Gasschlauch für eine Minute mit einem Gasfluss von 2 slm durchgespült. Dies soll sicherstellen, dass Verunreinigungen, die in den zuvor offenen Schlauch eindringen konnten, aus diesem entfernt werden. Mit der gleichen Rate wird die Kammer nun 15 Minuten lang gefüllt, wobei das Auslassventil offen bleibt. Im Anschluss wird die Flussrate auf $ 0,\!5 $ slm eingestellt und das Auslassventil teilweise geschlossen. So wird die Kammer gespült, ohne dass Luft durch den Auslass eindringt. Regelmäßig wurde überprüft, ob eine hinreichende Gasreinheit erlangt wurde. Nach etwa 2 Stunden konnte ein stabiles Plasma gezündet werden. Das Spülen dauert so lange, da das Gas nur schwer durch den engen Zwischenraum zwischen Kapton-Folie und Elektrode hindurch diffundiert. 
+\paragraph{Abpumpen und Befüllen der Kammer:}
+Da die Gasbox dafür ausgelegt ist, ein Grobvakuum halten zu können, liegt es nahe, die Luft vor dem Befüllen mit Gas aus der Kammer herauszupumpen. Dabei kann die Kammer auf \qtyrange{0.1}{0.05}{\bar} abgepumpt und mit reinem Gas befüllt werden. Wird dieser Prozess fünffach wiederholt, reicht dies für ein zuverlässiges Zünden des Plasmas aus. In der Praxis hat es sich als hilfreich herausgestellt, die Kammer bei der letzten Befüllung auf leichten Überdruck zu bringen, der dann beim Verschließen der Ventile abgelassen wird. Dies verhindert eine Kontamination mit der Außenluft nach der Befüllung.
+
+
+Im Vergleich der beiden Prozesse ist das zweite Verfahren schneller und zuverlässiger. Zudem werden im Spülprozess innerhalb von 2 Stunden etwa \qty{60}{\litre} Gas verbraucht, während beim Abpumpen bloß \qtyrange{1}{1,5}{\litre} pro Wiederholung verbraucht werden. Besonders bei Helium ist der geringere Verbrauch wichtig. Aus diesen Gründen wird im weiteren Verlauf der Messungen das Verfahren, fünffach abzupumpen und zu befüllen, zur Vorbereitung der Messung genutzt.
+
+\paragraph{Erhaltung der Gasreinheit während der Messung:}
+Wird zu Beginn der Messung eine reine Gasatmosphäre hergestellt und die Box verschlossen, bleibt diese Reinheit erhalten. Durch die sorgfältige Abdichtung der Eingänge durch O-Ringe gibt es nur sehr wenig Austausch von Gas mit der Umgebung. Erst über einen Zeitraum von mehreren Stunden ließ sich eine langsame Verunreinigung bemerken. In mehreren Versuchen war eine Zündung des Plasmas nach über 48 Stunden noch möglich, auch wenn das Plasma dabei instabiler war. Da eine Messreihe nur über einen Zeitraum von 2-3 Stunden geht, reicht eine Befüllung nach obigem Verfahren am Anfang aus und es gibt keinen laufenden Gasverbrauch während der Messung.
+
+\paragraph{Weitere Verunreinigungen:} Neben mangelhafter Reinheit beim Füllen der Gasbox zeigten sich noch weitere Gründe für Instabilitäten. Am Anfang einer Messreihe kommt es oft zu unkontrollierten Bogenentladungen, welche nach einigen Versuchen abklingen. Dies kann durch Oxidschichten verursacht werden, die sich bei der Lagerung an der Luft auf den Sondenplättchen bilden. Die anfänglichen Bogenentladungen entfernen diese Oxidschichten, sodass danach eine stabile Entladung möglich ist. Zur Reinigung der Plättchen und des Abstandhalters können diese vor der Messung mit Isopropanol abgewischt werden, um Verunreinigung durch Staub zu vermeiden. Auch das Innere der Box kann so gereinigt werden, dies hatte jedoch keinen merklichen Einfluss auf die Reinheit, da die Kapton-Folie verhindert, dass Staubteilchen von außen das Plasma verunreinigen.
+
+\subsection{Optische Emissionsspektroskopie}
+
+Das Emissionsspektrum des Mikroplasmas zeigt ein Linienspektrum der angeregten Atome. Die genauere Untersuchung dieser Linien zeigt, dass die meisten durch angeregtes Helium erzeugt werden. Zur Identifikation der Linien wurde dabei die \textit{Atomic Spectra Database} des amerikanischen \textit{National Institute of Standards} genutzt \cite{AtomicSpectraDatabase2009}. Diese Linien treten in allen OES-Messungen am Heliumplasma auf und haben, wie in Abb. \ref{fig:spektren} sichtbar, relativ zueinander stets ähnliche Höhen. Zusätzlich ist eine prominente Sauerstoff-Linie bei ca. \qty{777}{\nm} erkennbar. Diese variiert, anders als die Heliumlinien, in ihrer Intensität relativ zu diesen und weist auf einen variablen verunreinigenden Anteil durch Sauerstoff hin. Gleichzeitig kann aus den OES-Daten gefolgert werden, dass diese Verunreinigung nicht durch ein Leck zur Außenluft erzeugt wird, da sonst ein deutliches Liniensystem des Stickstoffs um \qty{379}{\nm} erkennbar wäre. Dieses ist in Abb. \ref{fig:spektren} nicht sichtbar. Weiterhin zeigt das Fehlen der Stickstofflinien, dass beim Befüllen der Kammer keine signifikante Menge an Luft in dieser verblieben ist. Stattdessen wird diese Verunreinigung wahrscheinlich durch die Abtragung einer Oxidschicht auf der Sondenoberfläche erzeugt, die sich bei deren Lagerung an der Außenluft bildet. 
+
+\begin{figure}[h]
+	\centering
+	\includesvg[width=0.9\linewidth]{plots/spektrum_vergleich}
+	\caption{Zwei Spektren am Heliumplasma mit verschiedenem Elektrodenmaterial: \textbf{a)} Kupfer, \textbf{b)} Nickel}
+	\label{fig:spektren}
+\end{figure}
+
+Wird im Laufe einer Messreihe an mehreren Zeitpunkten ein Spektrum aufgezeichnet, so kann der zeitliche Verlauf der relativen Linienstärken betrachtet werden. Dies wird in Abb. \ref{fig:spektralverlauf} dargestellt. Im Versuch treten keine deutlichen Änderungen im Zeitverlauf auf. Dass sich die Stärke der O I-Linie nicht verändert, impliziert wiederum, dass sie nicht durch ein dauerndes Leck der Gasbox verursacht wird, da sonst im Laufe der Messung immer mehr Sauerstoff in die Gasatmosphäre diffundieren würde.
+
+\begin{figure}[h]
+	\centering
+	\includesvg[width=0.9\linewidth]{plots/heni_verlauf}
+	\caption{Relative Linienstärken im Verlauf der Messung. Die Spektren wurden je in Abständen von 10 Minuten aufgenommen, wobei das Plasma für insgesamt etwa 2 Minuten gezündet wurde. Die Sauerstofflinie ist hier in schwarz abgebildet.}
+	\label{fig:spektralverlauf}
+\end{figure}
+
+
+
+\section{Überprüfung der erfolgreichen Zündung einer Glimmentladung}
+
+\paragraph{Strom-Spannungskennlinien:}
+
+\begin{figure}[h]
+	\centering
+	\includesvg[width=0.9\linewidth]{plots/ui_kennlinie2}
+	\caption{\textbf{a)} Strom-Spannungs-Kennlinien des Plasmas. \textbf{b,c)} Nähere Ausschnitte der Linien um die gleichbleibende Spannung zu zeigen.}
+	\label{fig:kennlinien}
+\end{figure}
+
+Normale Glimmentladungen haben die Besonderheit, dass die über dem Plasma abfallende Spannung unabhängig vom fließenden Strom ist \cite{demtroederExperimentalphysik2013,franzLowPressurePlasmas2009}. Nach erfolgter Zündung führt eine Erhöhung des Stroms nur noch zu einer Ausweitung des Entladungskanals, nicht jedoch zu einer Erhöhung der Stromdichte im Kanal \cite{hansenConventionalNonconventionalDiagnostics2022}. Dies kann am Aufbau durch Messung mit dem Oszilloskop überprüft werden. Tatsächlich sind in der so erhaltenen Kennlinie, gezeigt in Abb. \ref{fig:kennlinien}, nur geringe Schwankungen sichtbar. Dabei stellen sich Spannungen von \qtyrange{150}{160}{V} bei Nickelelektroden und \qtyrange{190}{210}{V} bei Kupferelektroden ein. Die Entladung kann bis zu einem Strom von \qty{0.5}{\mA} betrieben werden, bei kleineren Strömen verlöscht das Plasma.
+
+
+\paragraph{Emissionslinien im Spektrum:}
+
+Im Spektrum der Entladung lassen sich klar die Emissionslinien des Arbeitsgases erkennen und kein Schwarzkörperanteil. Das zeigt, dass das Leuchten durch elektronische Anregung entsteht, wie es in einem Nichtgleichgewichtsplasma der Fall sein sollte.
+
+\section{Größe der Zündspannung}\label{sec:zuendspannung}
+
+Um die zum Zünden des Mikroplasmas mindestens nötige Spannung zu bestimmen, wurde der Zündprozess genauer betrachtet. Insbesondere wurden dabei die Datenreihen ausgewertet, in denen es vor dem Erreichen einer stabilen Glimmentladung nicht zu Funkenentladungen kam. Ein Beispiel einer Entladung mit solchen Instabilitäten zeigt Abb. \ref{fig:zuendspannung}b). Die Zeitreihen sind in Abb. \ref{fig:zuendspannung} dargestellt. Beim Erhöhen der anliegenden Spannung durch die Quelle fällt zunächst alle Spannung über den Elektroden ab, da der Zündraum ohne Plasma nicht leitfähig ist. Die Spannung wächst, bis das Plasma schließlich zündet. Nach dem Überschreiten dieser Hürde fällt die Spannung schnell auf einen vom Strom unabhängigen Wert ab. Die Zündspannung ist dann die maximal erreichte Spannung vor dem Beginn des Stromflusses. Da die Zielspannung der Spannungsquelle zum Zeitpunkt der Zündung noch nicht erreicht ist, sollte sie keinen Einfluss auf die Zündspannung haben. %Da das Zünden durch Instabilitäten erschwert oder, wie beim Arcing ganz verhindert werden kann, ist es sinnvoll, mehrere solche Messungen auszunehmen und von diesen die niedrigste Zündspannung auszuwählen. Diese ist am wenigsten durch Fehler beeinträchtigt, ermöglicht aber immernoch eine Plasmazündung.
+Aus den Zeitreihen ergaben sich bei Helium und Kupfersonden Werte von \qtyrange{500}{520}{V}. Dies liegt deutlich über dem aus dem Paschen-Gesetz abgeleiteten Wert von ca. \qty{120}{V}, was in der Praxis auch zu erwarten ist.
+
+
+\begin{figure}[h]
+	\centering
+	\includesvg[width=0.9\linewidth]{plots/zuendspannung}
+	\caption{Strom-Spannungs-Verläufe zur Bestimmung der Zündspannung: \textbf{a)} zeigt eine stabile Plasmazündung bei \qty{510}{V}, \textbf{b)} eine instabilere Zündung mit einigen Funkenentladungen. Unabhängig vom Verlauf der Zündung stellen sich die gleichen konstanten Werte für Spannung und Strom ein.}
+	\label{fig:zuendspannung}
+\end{figure}
+
+
+
+\section{Wirkungsgrad der Entladung}
+
+Als Wirkungsgrad wird hier das Verhältnis der thermischen Leistung $ P_\text{therm, ges} $ an beiden Sonden zur gesamten elektrischen Leistung $ P_\text{el} $ am System betrachtet. Dies ist eine nützliche Größe, da gerade die auf die Sonden gerichtete Energie in der Praxis zur Bearbeitung einer Oberfläche zur Verfügung steht. Konvektion des heißen Gases nach außen tritt nur sehr wenig auf, da der Gasfluss durch den Spacer größtenteils verhindert wird. Da der Abstand zwischen den Elektroden im Vergleich zu deren Durchmesser klein ist, wird der Großteil der Wärmeleistung von diesen aufgenommen. Aufgrund der Geometrie ist ein hoher und von der Gesamtleistung unabhängiger Wirkungsgrad zu erwarten. Werden mehrere Messungen bei verschiedenen Gesamtleistungen angestellt, kann der Wirkungsgrad durch lineare Regression der gesamten thermischen Leistung gegen die elektrische Leistung bestimmt werden. Das Verfahren und die Ergebnisse sind in Abb. \ref{fig:wirkungsgrad} dargestellt. Dabei ergaben sich die in Tab. \ref{tab:eta} notierten Werte.
+
+\begin{table}[thb]
+	\centering
+	\begin{tabular}{ccr}
+		
+		{Material} &{$ \eta $} \\
+		\toprule
+		
+		{Kupfer}      & \num{86(3)}\%  \\
+		%\midrule
+		{Tantal}      & \num{85(4)}\%   \\
+		%\midrule
+		{Edelstahl}      & \num{97(4)}\%   \\
+		%\midrule
+		\addlinespace
+		
+	\end{tabular}
+	
+	\caption{Werte der Wirkungsgrade im Heliumplasma.}
+	\label{tab:eta}
+\end{table}
+
+\begin{figure}[h]
+	\centering
+	\includesvg[width=0.9\linewidth]{plots/wirkungsgrad}
+	\caption{\textbf{a)} Bestimmung des Wirkungsgrades der Entladungen bei verschiedenen Sondenmaterialien durch lineare Regression auf den Leistungsmesspunkten. \textbf{b)} Berechnete Wirkungsgrade.}
+	\label{fig:wirkungsgrad}
+\end{figure}
+
+
+\section{Betrachtung der Fehler in der Messung der ESEEC}
+
+Die Ungenauigkeit bei der Bestimmung der ESEEC setzt sich aus Fehlern zweier Art zusammen: Zum einen treten bei der Messung Schwankungen der elektrischen und thermischen Leistungswerte auf. Aus diesen ergibt sich ein statistischer Fehler über die Standardabweichung der Messwerte. Des weiteren gibt es aber auch für jede Sonde eine Ungenauigkeit bei der Bestimmung der Wärmekapazität. Da diese kein fluktuierender Effekt ist, sondern sich als gleichbleibende Abweichung des bekannten zum wahren Wert der Wärmekapazität zeigt, lässt sie sich nicht durch wiederholte Messreihen an der gleichen Sonde verbessern.
+
+
+Im Prozess der Kalibrierung kann es zu verschiedenen Fehlern kommen. Zunächst ergibt sich in der Kalibrierungsauswertung ein Fehler von etwa 2-3\% aus der Statistik der Einzelmessungen während der Kalibrierung. Da die Wärmekapazität der Sonde ein Effektivwert ist, der auch die Ableitung von Wärme über den Sondendraht beschreibt, ist sie nicht gänzlich unabhängig von der Art und Weise der Erhitzung. Die Menge an Wärme, die weggeleitet wird, ist dabei abhängig vom Temperaturgradienten im Draht. Würde die Sonde also auf eine deutlich höhere Temperatur erhitzt als bei der Kalibrierung, wären die Kalibrierungsdaten nur eingeschränkt nutzbar. In diesem Experiment wird die Sonde dagegen nur auf etwa \qty{70}{\celsius} erhitzt, was gut vergleichbar mit den Temperaturen beim Kalibrieren ist.
+
+
+Die in der dT-Auswertung berechnete Leistung ergibt sich aus der Änderung der Sondentemperatur\footnote{Bzw. dem Anteil, der durch die Heizleistung verursacht wird, hier auch $ \dot{T} $ genannt.} und der Wärmekapazität der Sonde. 
+\begin{align*}
+	P = C\dot{T}
+\end{align*}
+
+Dementsprechend ist der relative Fehler der Leistung gerade die Summe aus dem relativen statistischen Fehler der Temperaturänderungen und dem relativen Fehler der Wärmekapazität. Der Einfachheit halber wird dieser immer als 3\% angenommen, was leicht über dem üblichen Wert liegt.
+\begin{align*}
+ \dfrac{\Delta P}{P} = \dfrac{\Delta \dot{T}}{ \dot{T}} + \dfrac{\Delta C}{C}
+\end{align*}
+
+Auch die Fehler der ESEEC teilen sich in der Rechnung in statistische Schwankungen und fehlerhafte Wärmekapazitäten auf:
+\begin{align*}
+	\gamma_\text{E} &= \dfrac{P_\text{el}}{P_\text{therm,C}}\\
+	\Delta \gamma_\text{E} &= \dfrac{1}{P_\text{el}} \Delta P_\text{el} + \dfrac{P_\text{el}}{P_\text{therm,C}^2} \Delta P_\text{therm,C}\\
+					&= \dfrac{P_\text{el}}{P_\text{therm,C}} \left( \dfrac{\Delta P_\text{el}}{P_\text{el}} + \dfrac{\Delta P_\text{therm,C}}{P_\text{therm,C}} \right)\\
+					&= \dfrac{P_\text{el}}{P_\text{therm,C}} \left( \underbrace{\dfrac{\Delta P_\text{el}}{P_\text{el}} + \dfrac{\Delta \dot{T}}{ \dot{T}}}_{\text{statistische Fehler}} + \underbrace{\dfrac{\Delta C}{C}}_\text{systematischer Fehler} \right)
+\end{align*}
+
+%Da die Sonden bei der Kalibration standardmäßig für 30 s geheizt werden, in meinen Versuchen aber nur für 10 s am Stück mit deutlich höherer Leistung, lassen sich die effektiven Wärmekapazitäten auch nur eingeschränkt verwenden. Besonders bei den hier verwendeten kleinen Sondenplättchen mit geringer Wärmekapazität hat die thermische Trägheit durch den Rest der Sonde aber einen großen Einfluss, was diese Methode fehleranfällig macht. 
+
+
+
+\section{Größe der Leistungen und Energieströme im Plasma}\label{sec:energiestroeme}
+Die Verwendung von PTPs als Elektroden dient der direkten Messungen der Leistung aus dem Plasma. Dabei wird der Energiestrom nach der Art der Elektrode (positiv, negativ und geerdet, bzw. Kathode und Anode) aufgeteilt. Zudem wird die elektrische Leistung gemessen.\\
+
+Üblicherweise werden die Messwerte von PTP-Messungen als Energieströme angegeben. Dies liegt daran, dass eine Niederdruckentladung deutlich größer ist, als das Plättchen der Thermosonde. Dieses fängt so nur einen kleinen Teil der Energie aus dem Plasma auf. Deshalb ist es sinnvoll, die gemessene Leistung auf die bekannte Fläche des Plättchens zu normieren. Bei Atmosphärendruckplasmen, insbesondere bei Mikroentladungen, ist das Plättchen jedoch deutlich größer als die Entladung. Im hier untersuchten Aufbau wird sogar die fast vollständige Leistung des Mikroplasmas von den Sonden aufgenommen. Deshalb ist es sinnvoller, die gemessene Leistung direkt anzugeben. Zur Berechnung der ESEEC ist zudem nur die gesamte Leistung an der Kathode und nicht der Energiestrom relevant. Um sinnvolle flächennormierte Energieströme zu berechnen, müsste man zudem die tatsächliche Fläche der Entladung messen, da nur über diese Fläche Energie auf die Sonde trifft. Eine solcher Schätzwert wird später in diesem Abschnitt berechnet.
+\begin{figure}[h]
+	\centering
+	\includesvg[width=0.8\linewidth]{plots/energiestrom800}
+	\caption{Der Energiestrom auf beide Elektroden bei verschiedenen Materialien und der gleichen Spannung.}
+	\label{fig:energiestrom}
+\end{figure}
+
+Misst man für eine gegebene Spannung die thermische Leistung an beiden Elektroden, fällt auf, dass die Leistung an der Anode stets niedriger ist als die an der Kathode, was in Abb. \ref{fig:energiestrom} gut erkennbar ist. Dies liegt an der Energie der beschleunigten Ionen und durch diese zur Kathode gestoßenen Neutralteilchen \cite{hansenConventionalNonconventionalDiagnostics2022}, welche schließlich auch zur Sekundärelektronenemission beiträgt.
+
+Die Verhältnisse zwischen den Leistungen an Kathode und Anode bleiben bei verschiedenen Leistungen ähnlich (siehe Abb. \ref{fig:einzelleistungen}), nur deren absoluter Wert ändert sich.
+
+\begin{figure}[H]
+	\centering
+	\includesvg[width=0.9\linewidth]{plots/einzelleistungenKupfer}
+	\caption{Der Energiestrom auf die Kupferelektroden in Helium bei verschiedenen Leistungen im Plasma.}
+	\label{fig:einzelleistungen}
+\end{figure}
+
+Trotz der geringen Gesamtleistung ist die Energieflussdichte in der Entladung sehr hoch, da die Fläche der Entladung klein ist. Zum Beispiel ergibt sich mit in einem vergleichbaren Messaufbau bestimmten Querschnittsflächen von \qty{0,1}{\square\mm} in Helium bei \qty{1,5}{\mA} \cite{hansenConventionalNonconventionalDiagnostics2022} und dem hier bestimmten Leistungsübertrag auf die Kathode von \qty{0,14}{W} bei gleichem Strom ein Energie\-strom von \qty{140}{W.cm^{-2}}. Dies entspricht in etwa dem zehnfachen Energiestrom an der Spitze einer Kerzenflamme \cite{haminsCharacterizationCandleFlames2005}.
+%Dies entspricht der Wärmestrahlungsdichte eines schwarzen Körpers mit ca. 2230K. Da die Wärmeleitung vom Plasma an die Elektroden über schnelle Teilchen aber deutlich effektive ist als die über Schwarzkörperstrahlung, ist die Temperatur des Plasmas aber deutlich niedriger.\footnote{Die Gleichgewichtstemperatur der Elektroden ist selten über $ 1ßß^\circ\text{C} $.} 
+Die Dichte der gesamten, durch das Mikroplasma geleiteten, elektrischen Leistung erreicht bei dieser Entladung sogar ca. \qty{31}{W.mm^{-3}}. Der Energiestrom auf die Sonden ist dabei linear von der Spannung am Netzteil abhängig. Da bei einer Erhöhung der Gesamtleistung die Fläche des Entladungskanals vergrößert wird, sind diese Werte mehr oder weniger konstant. Gleiches gilt auch für die elektrische Stromdichte im Plasma \cite{hansenConventionalNonconventionalDiagnostics2022}.
+
+\subsection{Probleme bei der Durchführung der Messreihen}\label{sec:probleme}
+\paragraph{Funken- und Bogenentladungen: }
+Wie schon in Abschnitt \ref{sec:gasreinheit} beschrieben wurde, ist das größte Problem für die Durchführung einer Messreihe die Bildung von Funkenentladungen anstatt eines Betriebs im Glimmbereich. Da wegen der Strombegrenzung des Netzteils nicht der nötige Strom zur Erhaltung eines Lichtbogens fließen kann, zerfällt dieser Funken schnell wieder und bildet sich erneut. Dieses Flackern ist in Abb. \ref{fig:zuendspannung} gut erkennbar. Solche Bogenentladungen könne eine Zündung des Plasmas auch ganz verhindern. 
+
+\begin{figure}[h]
+	\centering
+	\includesvg[width=0.9\linewidth]{plots/arcing}
+	\caption{Zeitverlauf von \textbf{(a)} Spannung und \textbf{(b)} Strom im Falle unkontrollierter Entladungen.}
+	\label{fig:arcing}
+\end{figure}
+
+In der Kennlinie des Oszilloskops, ein Beispiel ist in Abb. \ref{fig:arcing} gezeigt, ist dies klar erkennbar, besonders im Vergleich zum Verlauf nach der Zündung in Abb. \ref{fig:zuendspannung}. Dieses Problem wurde in den in Teil \ref{sec:energiestroeme} ausgewerteten Messreihen durch eine saubere Befüllung gelöst wurde. Obwohl der gleiche Befüllungsprozess verwendet wurde, wurden Messungen an anderen Materialien, durch solche Instabilitäten ganz verhindert. Dies betrifft insbesondere die Messung an Aluminium, sowie alle Versuche von Messungen mit Argon als Arbeitsgas. Auch eine Veränderung des Vorwiderstandes war nicht erfolgreich.
+
+\paragraph{Abtragung der Beschichtungen }
+Die Beschichtungen der Sonden, die nicht vollständig aus dem jeweiligen Material bestehen, sind sehr empfindlich. Besonders die TiN-Schicht wird vom Plasma schnell abgetragen, da sie nur maximal \qty{150}{\nm} dick ist. Dies wurde im Verlauf der Messung an den elektrischen Daten sichtbar. Je nach Material der Sonde fallen nach dem Zünden verschiedene Spannungen über dem Plasma ab. So ist z.B. in Abb. \ref{fig:kennlinien} ein klarer Unterschied zwischen Kupfer und Nickel erkennbar. 
+
+\begin{figure}[H]
+	\centering
+	\includesvg[width=0.9\linewidth]{plots/TiN_spannung}
+	\caption{Über dem Plasma abfallende Spannungen verändern sich im Verlauf der Messreihe an TiN. Jede angeschriebene Spannung ist der Mittelwert von insgesamt \qty{60}{s} Betriebszeit. Umpolen der Sonden bei Messpunkt 9.}
+	\label{fig:TiN_spannung}
+\end{figure}
+
+In Abb. \ref{fig:TiN_spannung} ist gut erkennbar, wie sich die abfallende Spannung während der Messreihe an TiN von einem Wert von etwa \qty{170}{V} aus den bei Kupfer üblichen Werten von \qtyrange{190}{200}{V} nähert. Das legt nahe, dass die TiN-Schicht abgetragen im Laufe der Messungen wird, bis nur noch Kupfer üblich ist. Da die einzelnen Messpunkte in Abb. \ref{fig:TiN_spannung} jeweils der Durchschnitt aus einer Minute Betriebszeit\footnote{6 Peaks a \qty{10}{s}} sind, geschieht die Abtragung der Schicht effektiv auf einer Zeitskala von wenigen Minuten. Rechnerisch ergibt sich damit eine Abtragungsrate von \qty{0,17}{\nm\per\second}. Diese ist aber nur begrenzt aussagekräftig, da die Abtragung nicht gleichmäßig geschieht. Das Loch in der Schicht konnte bei der Überprüfung der Son\-den\-ober\-flä\-chen bestätigt werden. Unkontrollierte Entladungen zwischen den Elektroden können auch dickere Beschichtungen zerstören. Nach den Zündversuchen an Aluminium-Sonden war beispielsweise die Beschichtung im Zündbereich nahezu vollständig entfernt.
+ 
+ \paragraph{Fehler bei der Kalibrierung der Sonden }
+ Auch wenn sich die statistischen Fehler der Kalibrierung zu 2\% bis 3\% ergeben, kann es manchmal zu größeren Fehlern kommen. Bei Betrachtung der gemessenen Wärmekapazitäten ist es jedoch schwierig, die Fehler der Kalibrierung von der Schwankung der wahren Werte untereinander zu unterscheiden. Ein Beispiel für einen potenziellen größeren Kalibrierungsfehler ist die Messung an den TiN-Sonden. 
+ 
+ \begin{figure}[H]
+ 	\centering
+ 	\includesvg[width=0.9\linewidth]{plots/einzelleistungenTiN}
+ 	\caption{Der Energiestrom auf die TiN-Elektroden in Helium bei verschiedenen Leistungen im Plasma. Die Verhältnisse der Leistungen an den Elektroden zueinander weichen von den üblichen Werten (siehe Abb. \ref{sec:energiestroeme}) ab.}
+ 	\label{fig:einzelleistungenTiN}
+ \end{figure}
+
+Die an TiN gemessenen Leistungen sind in Abb. \ref{fig:einzelleistungenTiN} abgebildet und sichtbar anders als bei den anderen Metallen. Insbesondere fällt auf, dass – anders als bei allen anderen Messungen – die Kathode bei der negativ gepolten Messung weniger Leistung misst als die Anode. In der positiv gepolten Messung ist die übliche Differenz dagegen sehr stark ausgeprägt. Besonders im Vergleich mit der schwächer ausgeprägten Differenz bei Kupfer ist dies überraschend, da Abb. \ref{fig:TiN_spannung} nahelegt, dass die Elektrodenoberflächen in dieser Messung vor allem aus Kupfer bestanden. Beide Besonderheiten könnten dadurch erklärt werden, dass die vorgespannte Elektrode (in Abb. \ref{fig:TiN_spannung} in Blau bzw. Orange gekennzeichnet), die in beiden Fällen durch die selbe PTP gebildet wird, die gemessene Leistung wegen eines Kalibrierungsfehlers systematisch unterschätzt. Tatsächlich hat diese Sonde laut Kalibrierung eine Wärmekapazität von nur \qty{0,0089}{J.K^{-1}}, was deutlich unter den üblichen Werten von \qtyrange{1,1}{1,2}{J.K^{-1}} bei baugleichen PTPs liegt. Wäre die tatsächliche Wärmekapazität dieser Sonde höher und im Rahmen der anderen Sonden, ergäben sich rechnerisch mit anderen Messungen vergleichbare Ergebnisse. Aus den ersten Messungen der TiN-Sonde, bei denen die Schicht noch intakt war, ergibt sich ein ESEEC von \num{1,6}. Dieser ist aber wegen des wahrscheinlichen Kalibrierungsfehlers nicht aussagekräftig. 
+
+\section{Bestimmung  der effektiven Sekundärelektronenemissionskoeffizienten.}
+
+Aus den Leistungen an den jeweiligen Elektroden können nun die ESEEC bestimmt werden. Dabei ergeben sich in allen Fällen Werte von \numrange{0,7}{1,2}, die in Tab. \ref{tab:ESEEC} zusammengefasst werden. Diese sind vergleichbar mit anderen bei Atmosphärendruck bestimmten ESEEC \cite{hansenConventionalNonconventionalDiagnostics2022}. 
+
+\begin{table}[thb]
+	\centering
+	\begin{tabular}{ccr|ccc}
+		
+		{Material} &{$ \gamma_\text{E} $}& \multicolumn{1}{l}{$ \Delta\gamma_\text{E} $} & {$ \gamma_\text{E, Niederdruck} $} & {Notiz zu Niederdruckwert} & {Quelle} \\
+		\toprule
+		
+		{Kupfer}      & \num{1,16(6)} & 5\% & \num{0,28(5)} & gemessen an He & \cite{guntherschulzeElektronenablosungDurchStoss1930}  \\
+		%\midrule
+		{Tantal}      & \num{0,77(9)} & 11\% & \num{0,117} & gemessen an Ar & \cite{oechsnerElectronYieldsClean1978} \\
+		%\midrule
+		{Edelstahl}      & \num{0,96(8)} & 8\% & \num{0,066(10)} & gemessen an Ar & \cite{dakshaComputationallyAssistedSpectroscopic2016}  \\
+		%\midrule
+		\addlinespace
+		
+	\end{tabular}
+	
+	\caption{Werte der ESEEC am Heliumplasma.}
+	\label{tab:ESEEC}
+\end{table}
+
+Wie erwartet sind die Werte bei Normaldruck jeweils deutlich höher als die entsprechenden Werte bei Niederdruck, die typischerweise bei etwa \numrange{0,1}{0,3} liegen und insbesondere die Werte des rein ionenbasierten SEE Koeffizienten von etwa \numrange{0,01}{0,1}  \cite{liebermanPrinciplesPlasmaDischarges2005,haaseDynamicDeterminationSecondary2018,bohmRetardingfieldAnalyzerMeasurements1993,toliasSecondaryElectronEmission2014, marcakNoteIoninducedSecondary2015,dakshaComputationallyAssistedSpectroscopic2016,pamperinIoninducedSecondaryElectron2018,dakshaMaterialDependentModeling2019,oechsnerElectronYieldsClean1978,guntherschulzeElektronenablosungDurchStoss1930}. Beispiele für diese stehen auf der rechten Seite von Tab. \ref{tab:ESEEC}, können aber nur als Anhaltspunkte genommen werden, da sie bei verschiedenen Drücken und teilweise anderen Gasen gemessen wurden.
+
+\begin{figure}[h]
+	\centering
+	\includesvg[width=0.9\linewidth]{plots/eseec}
+	\caption{Die effektiven SEEC der verschiedenen Materialien bei Helium, aufgeteilt nach der Polarität der Messung.}
+	\label{fig:eseec}
+\end{figure}
+
+In Abb. \ref{fig:eseec} ist keine signifikante Abhängigkeit der ESEEC von der Polarität der Entladung erkennbar. Daher ist es sinnvoll, die Werte der verschiedenen Polaritäten pro Material zu einem Wert zusammenzufassen.
+
+\paragraph{Messung an Kupfer in zwei Messreihen }
+Wie in \ref{sec:ablauf_energie} beschrieben, wurden an den Kupfersonden zwei Messreihen durchgeführt, um eine Veränderung der ESEEC, die empfindlich von der Oberflächenstruktur abhängen \cite{phelpsColdcathodeDischargesBreakdown1999}, zu überprüfen. Dabei ergaben sich die in Tab. \ref{tab:ESEEC_Cu} notierten Werte.
+
+
+\begin{table}[thb]
+	\centering
+	\begin{tabular}{ccr}
+	
+	{Material} &{$ \gamma_\text{E} $}& \multicolumn{1}{l}{$ \Delta\gamma_\text{E} $} \\
+	\toprule
+	
+	{Kupfer früh}      & \num{1,16(20)} & 17\%  \\
+	%\midrule
+	{Kupfer spät}      & \num{1,15(11)} & 10\%  \\
+	%\midrule
+	{Kupfer}      & \num{1,16(6)} & 5\%  \\
+	%\midrule
+	\addlinespace
+	
+	\end{tabular}
+
+	\caption{Werte der ESEEC am Heliumplasma.}
+	\label{tab:ESEEC_Cu}
+\end{table}
+Dabei gibt es keinen signifikanten Unterschied zwischen der frühen und der späten Messreihe, weshalb aus diesen der schon oben genannte Mittelwert berechnet wurde. Der geringere Fehler des Mittelwertes resultiert aus der höheren Zahl an Einzelmessungen.

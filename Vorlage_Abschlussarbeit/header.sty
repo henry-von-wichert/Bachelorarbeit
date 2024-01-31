@@ -1,0 +1,204 @@
+\ProvidesPackage{header}
+%Sprachpakete
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[top=2.5cm,bottom=2.5cm,left=2.5cm,right=2cm]{geometry}%Seitengröße
+%math
+\usepackage{mathtools}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{braket}
+\usepackage{bm} %bold math (for bold vectors)
+\usepackage{upgreek} %for upright (non-italic) greek letters (e.g. pi)
+\usepackage[separate-uncertainty = true]{siunitx}
+\sisetup{locale = DE}
+\sisetup{mode=text,range-phrase = {\text{~bis~}}}
+\usepackage{booktabs}
+
+%Anpassen des Seitenlayouts
+\usepackage{scrlayer-scrpage}
+\pagestyle{scrheadings}
+\ohead*{\pagemark}
+\ihead*{\textnormal{\textsc{\headmark}}}
+\ofoot*{}
+\addtokomafont{disposition}{\rmfamily}
+\renewcommand*\chapterpagestyle{scrheadings}
+
+%\usepackage{fancyhdr} %Paket laden
+%\pagestyle{fancy} %eigener Seitenstil
+% \fancyhf{} %alle Kopf- und Fußzeilenfelder bereinigen
+% \fancyhead[LO]{\nouppercase{\leftmark}} %Kopfzeile links
+% \fancyhead[CO]{} %zentrierte Kopfzeile
+% \fancyhead[RO]{\thepage} %Kopfzeile rechts
+% \fancyhead[RE]{\nouppercase{\leftmark}} %Kopfzeile links
+% \fancyhead[CE]{} %zentrierte Kopfzeile
+% \fancyhead[LE]{\thepage} %Kopfzeile rechts
+%\renewcommand{\headrulewidth}{0.4pt} %obere Trennlinie
+
+\usepackage{wrapfig}% Wrapping text around figures
+\usepackage{capt-of}
+\usepackage{amssymb} 
+\usepackage{longtable}
+\usepackage{textcomp}
+\usepackage[pdftex]{graphicx}
+\usepackage{subcaption}
+\usepackage[titletoc,title]{appendix}
+\usepackage{listings}%einbinden von Codes
+\usepackage[RGB,x11names,table,hyperref]{xcolor} %farben definieren für Code 
+\definecolor{RedCode}{RGB}{173,16,8}
+\definecolor{GreenCode}{RGB}{86,168,5}
+\definecolor{StringCode}{RGB}{160,32,240}
+\definecolor{Black}{RGB}{0,0,0}
+\definecolor{BlueCode}{RGB}{20,68,123}
+%float barrier 
+\usepackage{float}
+\usepackage{placeins}
+%Zitieren mit Hilfe von BibTex
+%\usepackage{cite}
+
+%für den Befehl \captionof
+\usepackage{capt-of}
+
+% Hyperlinks (Immer als letztes Paket laden!)
+%\usepackage{url}
+\usepackage[linktocpage=true, colorlinks =true, 
+	linkcolor=black, 
+	anchorcolor=black, 
+	citecolor=black, 
+	filecolor=black, 
+	menucolor=black, 
+%	pagecolor=black, 
+	urlcolor=black]
+% allcolors = blue]
+{hyperref}
+%\usepackage[numbers]{natbib}
+
+\usepackage[style=numeric-comp,
+sortcites=true,
+        sorting=none,     
+        language=ngerman,
+        doi=true,
+        maxcitenames=2,
+        url=true]
+        {biblatex}
+\DefineBibliographyStrings{ngerman}{
+   andothers = {{et\,al\adddot}},
+}
+\addbibresource{Literatur.bib}
+\usepackage{csquotes}
+
+\usepackage{listings}
+\usepackage{tabto}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{svg}
+\usepackage{nicefrac}
+\usepackage{todonotes}
+
+%\usepackage[
+%	bookmarks=true, 
+%	bookmarksopen=true, 
+%	bookmarksnumbered=true,  
+%	pdfstartview={XYZ null null 1.00},
+%	breaklinks=true, 
+%	colorlinks=true, 
+%	linkcolor=black, 
+%	anchorcolor=black, 
+%	citecolor=black, 
+%	filecolor=black, 
+%	menucolor=black, 
+%	pagecolor=black, 
+%	urlcolor=black
+%]{hyperref}
+
+% Fancyhdr-Einstellungen
+% \renewcommand{\headrulewidth}{0.4pt}
+% \fancyhead[EL,OR]{\thepage}
+% \fancyhead[ER]{\leftmark}
+% \fancyhead[OL]{\rightmark}
+% \fancyfoot[C]{}
+
+% Einstellungen
+\setcounter{secnumdepth}{3}             % Sub-Ebene, bis zu der Überschriften nummeriert (und referenzierbar) sind
+\setcounter{tocdepth}{3}                % Sub-Ebene, bis zu der Überschriften im Inhaltsverzeichnis aufgeführt werden.
+\setlength{\parindent}{0cm}		% Einzug bei neuen Absätzen deaktivieren
+
+%%%%%%%%%%%%%%%NEW COMMANDS%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\euler}{\mathrm{e}}			%euler number
+\newcommand{\ii}{\mathrm{i}}	%upright imaginary unit
+\renewcommand{\pi}{\uppi}	%upright constant pi
+\newcommand{\N}{\mathbb{N}}	%Zeichen natürliche Zahlen
+
+\renewcommand{\vec}[1]{\bm{#1}}	%bold vectors
+\newcommand*\colvec[3][]{
+    \begin{pmatrix}\ifx\relax#1\relax\else#1\\\fi#2\\#3\end{pmatrix}
+} %latex cartesian vector in column notation
+\DeclareMathOperator{\rund}{rund}%Runden
+\DeclareMathOperator{\id}{Id}%Identität
+%\newcommand{\RN}[1]{\textup{\uppercase\expandafter{\romannumeral#1}}} %roman numerals in math mode
+
+
+
+\newcommand{\Grad}{\textdegree}%Grad
+
+%%Konstanten
+\newcommand{\kb}{k_\mathrm{B}}
+\newcommand{\ep}{\epsilon_\mathrm{0}}
+\newcommand{\n}{n_\mathrm{e}}
+\newcommand{\Te}{T_\mathrm{e}}
+\newcommand{\Ti}{T_\mathrm{i}}
+\newcommand{\we}{\omega_e}
+\newcommand{\wi}{\omega_i}
+\newcommand{\diff}{\mathop{}\!\mathrm{d}}
+
+%%Elemente, Moleküle
+\newcommand{\hydro}{\(\mathrm{H}_2\)}%H2
+\newcommand{\oxygenMat}{\(\mathrm{O}_2\)}%O2
+\newcommand{\water}{\(\mathrm{H}_2\mathrm{O}\)}%H20
+\newcommand{\helium}{\(\mathrm{He}\)}%He
+\newcommand{\neon}{\(\mathrm{Ne}\)}%Ne
+\newcommand{\argon}{\(\mathrm{Ar}\)}%Ar
+\newcommand{\carbox}{\(\mathrm{CO}\)}%CO
+\newcommand{\carbodiox}{\(\mathrm{CO}_2\)}%CO2
+\newcommand{\nitrogen}{\(\mathrm{N}_2\)}%N2
+\newcommand{\nitrodiox}{\(\mathrm{NO}_2\)}%NO2
+\newcommand{\ammoniak}{\(\mathrm{NH}_3\)}%NH3
+\newcommand{\+}[1][]{$^{#1 +}$}
+\newcommand{\mz}{$m/z$}
+\newcommand{\mls}{mbar\,l/s}
+\newcommand{\cm}{cm$^{-3}$}
+
+%%For COST-Jet and kINPen
+\newcommand{\ozon}{O$_3$}
+\newcommand{\oxygen}{O$_2$}
+\newcommand{\cost}{COST"-Jet}
+\newcommand{\veff}{V$_\mathrm{eff}$}
+\newcommand{\vpp}{V$_\mathrm{pp}$}
+\newcommand{\kinpen}{kINPen}
+
+\newcommand{\EPIC}{{\textit{EPIC1000}}}
+
+%%%Einheiten
+\newcommand{\hz}{\,\mathrm{Hz}}%Hertz
+\newcommand{\volt}{\,\mathrm{V}}%Volt
+\newcommand{\mvolt}{\,\mathrm{mV}}%Millivolt
+\newcommand{\scnd}{\,\mathrm{s}}%Sekunde
+\newcommand{\mscnd}{\,\mathrm{ms}}%Millisekunde
+\newcommand{\mym}{\,\mathrm{\mu m}}%Mikrometer
+\newcommand{\pim}{\,\mathrm{pm}}%Piccometer
+\newcommand{\nm}{\,\mathrm{nm}}%Nanometer
+\newcommand{\eV}{\,\mathrm{eV}}%Elektronenvolt
+\newcommand{\keV}{\,\mathrm{keV}}%Kilo-Elektronenvolt
+\newcommand{\torr}{\,\mathrm{Torr}}%Torr
+\newcommand{\mbar}{\,\mathrm{mbar}}%Millibar
+
+\renewcommand{\textcite}[1]{\citeauthor{#1} (\citeyear{#1}) \cite{#1}}
+%%%Abkürzungen
+\newcommand{\picco}{\overline{\lambda}}%reduzierte Wellenlänge
+\newcommand{\us}{U_\mathrm{S}}%Schwellspannung
+\newcommand{\dtot}[1]{\frac{\mathrm{d}}{\mathrm{d}#1}}%totale Ableitung
+
+\newcommand{\Bild}{0.45}
+\newcommand{\Bildsvg}{0.75\linewidth}
+%Deklaration wichtig, da \bf nicht mehr unterstützt
+\DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}

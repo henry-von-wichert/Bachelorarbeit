@@ -1,0 +1,54 @@
+\chapter{Vorlagen}\label{chap:Vorlagen}
+Dieses Kapitel bietet Vorlagen für Subfigures und Tabellen.
+
+%% Subfigure
+\section{Subfigure}
+\begin{figure}[H] %H meint wirklich an dieser Stelle im Text!
+    \begin{subfigure}{.45\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{./Bilder_2/MathFak.png}
+        \caption{\label{fig:part_a}}
+    \end{subfigure}%
+    \\
+    \begin{subfigure}{.275\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{./Bilder_2/MathFak.png}
+        \caption{\label{fig:part_b}}
+    \end{subfigure}%
+    \hfill %Fills the empty space between the subfigures
+    \begin{subfigure}{.275\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{./Bilder_2/MathFak.png}
+        \caption{\label{fig:part_c}}
+    \end{subfigure}%
+    
+    \caption{}
+    \label{fig:my_label}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Table}
+\begin{table}[thb]
+	\centering
+    \begin{tabular}{S[table-format=1.3]
+                S[table-format=1.3] 
+                S[table-format=1.3]
+                S[table-format=1.3]
+                S[table-format=1.3]}
+
+        {Teil 1} &{Teil 2}& \multicolumn{3}{c}{über drei Spalten} \\
+        \toprule
+        {} &{in \%}  & {1\,Hz} & {2\,Hz} & {3\,Hz} \\
+        \midrule
+        {}      & 0,2 & \num{6,5e14} & \num{11e14} & \num{8,8e14} \\
+        %\midrule
+        {}      & 0,2 & \num{7,6e16} & \num{6,8e16} & \num{6,5e16} \\
+
+        \addlinespace
+
+    \end{tabular}
+
+	\caption{Dies ist eine Tablle.}
+	\label{tab:table_label}
+\end{table}

@@ -1,0 +1,53 @@
+% \documentclass[fontsize=12pt,headsepline, twoside,open=right,cleardoublepage=empty,paper=a4,listof=totoc,bibliography=totoc]{scrreprt}
+
+\documentclass[fontsize=11pt,headsepline, twoside,cleardoublepage=empty,paper=a4,listof=totoc,bibliography=totoc]{scrbook}
+
+\usepackage{header}
+\setcapindent{0pt}
+\author{Vorname Nachname}
+\date{\today}
+\title{Titel}
+\subtitle{Subtitle}
+\subject{Masterarbeit/Bachelorarbeit}
+
+%Verwenden, wenn ohne Seitenumbrüche gearbeitet werden soll.
+%\RedeclareSectionCommand[style=section,indent=0pt]{chapter}
+
+\begin{document}
+\makeatletter
+
+%\frontmatter
+\pagenumbering{roman}
+
+
+
+%Einfügen der Titelseite
+\include{0Titelseite}
+\makeatother
+\input{Zusammenfassung}
+
+
+%Inhaltsangabe
+	\pdfbookmark{Inhalt}{toc}
+	\tableofcontents
+    \cleardoublepage
+
+%Hauptteil
+\pagenumbering{arabic}
+%Und hier beginnt dann der Hauptteil	
+%	\mainmatter
+\input{1Einleitung}
+\input{InterneVorlagen}
+
+%Anhang, auch mit Chapter arbeiten
+\begin{appendix}
+
+\end{appendix}
+
+%Literaturverzeichnis einfügen
+\printbibliography
+\clearpage
+
+%    \section{??}
+
+\end{document}

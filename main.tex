@@ -1,0 +1,64 @@
+% \documentclass[fontsize=12pt,headsepline, twoside,open=right,cleardoublepage=empty,paper=a4,listof=totoc,bibliography=totoc]{scrreprt}
+
+\documentclass[fontsize=12pt,headsepline, twoside,cleardoublepage=empty,paper=a4,listof=totoc,bibliography=totoc]{scrbook}
+
+\usepackage{header}
+\setcapindent{0pt}
+\author{Henry von Wichert}
+\date{\today}
+\title{Untersuchung von Sekundärelektronenemission an Mikroentladungen mittels Energiestrommessungen}
+\subtitle{Subtitle}
+\subject{Bachelorarbeit}
+
+%Verwenden, wenn ohne Seitenumbrüche gearbeitet werden soll.
+%\RedeclareSectionCommand[style=section,indent=0pt]{chapter}
+
+\begin{document}
+\makeatletter
+
+%\frontmatter
+\pagenumbering{roman}
+
+
+
+%Einfügen der Titelseite
+\include{0Titelseite}
+\makeatother
+\input{Zusammenfassung}
+
+
+%Inhaltsangabe
+	\pdfbookmark{Inhalt}{toc}
+	\tableofcontents
+    \cleardoublepage
+
+%Hauptteil
+\pagenumbering{arabic}
+%Und hier beginnt dann der Hauptteil	
+%	\mainmatter
+
+
+\include{einleitung}
+\include{theorie}
+\include{messmethodik}
+\include{auswertung}
+
+\include{fazit}
+
+
+
+
+%Anhang, auch mit Chapter arbeiten
+\begin{appendix}
+\include{Anhang}
+
+\end{appendix}
+
+%Literaturverzeichnis einfügen
+\printbibliography
+\clearpage
+\include{danksagung}
+\include{eidesstattliche_erklaerung}
+
+
+\end{document}

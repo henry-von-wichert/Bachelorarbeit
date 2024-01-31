@@ -1,0 +1,5 @@
+[0] Config.pm:307> INFO - This is Biber 2.17
+[1] Config.pm:310> INFO - Logfile is '/Users/henry/Library/CloudStorage/OneDrive-PersÃ¶nlich/Dokumente/Studium/Bachelorarbeit/LaTeX/main.blg'
+[696] biber-darwin:340> INFO - === Wed Jan 31, 2024, 10:05:53
+[1411] Utils.pm:409> ERROR - Cannot find '/Users/henry/Library/CloudStorage/OneDrive-PersÃ¶nlich/Dokumente/Studium/Bachelorarbeit/LaTeX/main.bcf'!
+[1411] Biber.pm:135> INFO - ERRORS: 1
